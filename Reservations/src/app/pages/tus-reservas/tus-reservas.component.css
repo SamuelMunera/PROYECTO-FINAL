@@ -1,0 +1,108 @@
+.price {
+    font-weight: bold;
+  }
+  
+  .service {
+    list-style-type: none;
+    margin-bottom: 15px;
+    padding: 0;
+  }
+
+  small {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bolder;
+  }
+
+  .buttonReservation {
+    padding: 10px 20px;
+    background-color: var(--color-red);
+    color: var(--color-white);
+    border: none;
+    border-radius: 15px;
+    font-family: "Ubuntu";
+    cursor: pointer;
+    font-size: 30px;
+    height: 50px;
+    box-shadow: 10px 10px 10px #00000098;
+  }
+
+  .contenedor-boton {
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sinReserva {
+    text-align: center;
+    margin-top: 75px;
+    font-family: "Ubuntu";
+    color: white;
+    text-shadow: 5px 5px 10px #000;
+  }
+  
+  .nameService {
+    font-size: 30px;
+    list-style-type: none;
+    font-family: "Ubuntu", sans-serif;
+    color: var(--color-blue);
+    padding: 10px;
+  }
+  
+  .list {
+    padding: 5px;
+  }
+  
+  .businessDetails {
+    text-align: center;
+  }
+  
+  .services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-grey);
+    margin: 10px 20px;
+    gap: 250px;
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  h2 {
+    font-size: 30px;
+    list-style-type: none;
+    font-family: "Ubuntu", sans-serif;
+    color: var(--color-blue);
+  }
+  h3 {
+    font-size: 22px;
+    font-family: "Ubuntu", sans-serif;
+    color: var(--color-yellow);
+    padding: 20px;
+    text-wrap: balance;
+  }
+
+  @media screen and (max-width: 800px) {
+  
+    .services {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+    h3 {
+      font-size: 16px;
+    }
+  
+    .nameService {
+      font-size: 18px;
+    }
+  
+    .list {
+      padding: 10px;
+      font-size: 16px;
+    }
+  }

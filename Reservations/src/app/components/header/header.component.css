@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  font-family: "Ubuntu", sans-serif;
+}
+
+header {
+  background-color: #ffffff;
+  margin: 0px;
+}
+
+#header1 {
+  background-color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.logoreserva {
+  max-height: 40px;
+  max-width: 200px;
+  margin: auto 20px;
+}
+
+#buscar {
+  display: flex;
+}
+
+.lupa1 {
+  border-radius: 8px;
+  background-color: var(--color-white);
+  border-color: var(--color-blue);
+  border-width: 0px;
+}
+
+.lupa {
+  width: 25px;
+}
+
+input {
+  height: 5px;
+  width: 200px;
+  background-color: #ebe6e6;
+  border-radius: 8px;
+  border-color: var(--color-blue);
+  border-width: 1px;
+  padding: 15px;
+  font-size: 15px;
+}
+
+.logousuario {
+  width: 30px;
+  margin: auto 50px;
+  cursor: pointer;
+}
+
+ul {
+  background-color: var(--color-yellow);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  gap: 70px;
+  align-items: center;
+  margin: 0px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+ul li a {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 800px) {
+  ul {
+    font-size: 16px;
+  }
+
+  input {
+    width: 150px;
+  }
+
+  .logousuario {
+    width: 30px;
+    margin: 15px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #header1 {
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    top: 0px;
+    height: auto;
+    overflow: hidden;
+  }
+
+  ul {
+    height: auto;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+}

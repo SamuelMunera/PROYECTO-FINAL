@@ -1,0 +1,30 @@
+<div class="groupServices">
+
+  @if (services().length === 0) {
+
+    <h1 class="sinReserva">NO TIENES RESERVAS ACTIVAS</h1>
+    <div class="contenedor-boton">
+      <button routerLink="/card" class="buttonReservation">Hacer Una Reservación</button>
+    </div>
+
+  } @else {
+
+    @for(reservation of services(); track reservation._id) {
+
+      <div class="services">
+        <ul class="service">
+          <li class="nameService">{{ reservation.service.name }}</li>
+          <li class="list"><small>Fecha:</small> {{ reservation.dateReservation }}<li>
+          <li class="list"><small>Hora:</small> {{ reservation.timeReservation }}</li>
+          <li class="list"><small>Dirección:</small> {{ reservation.service.address }}</li>
+          <li class="list"><small>Detalles Extra:</small> {{ reservation.service.details }}</li>
+          <li class="list"><small>Precio Total:</small> {{ reservation.service.price | currency}}</li>
+          <li class="list price">{{ reservation.price | currency }}</li>
+        </ul>
+      </div>
+
+      }
+
+  }
+
+</div>

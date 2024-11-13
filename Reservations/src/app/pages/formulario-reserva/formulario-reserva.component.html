@@ -1,0 +1,26 @@
+<main>
+  <div class="overlay" id="overlay"></div>
+  <div class="modal-registro" id="modal-registro">
+    <span routerLink="/card" class="material-symbols-outlined" id="close-btn"
+      >close</span
+    >
+    <h1>HAZ TU RESERVACIÓN</h1>
+    <div class="days-hours">
+      <div class="days">
+        @for(day of daysToRender(); track day.date) {
+        <button (click)="handleClickDay(day.date)">{{ day.name }}</button>
+        }
+      </div>
+      <div class="hours">
+        @for(time of timeArray; track time) {
+        <button (click)="handleClickHour(time)">{{ time }}</button>
+        }
+      </div>
+    </div>
+    <div class="form-button">
+      <button (click)="onSubmit()" type="submit">
+          <span>Reservar</span>
+      </button>
+  </div>
+  </div>
+</main>

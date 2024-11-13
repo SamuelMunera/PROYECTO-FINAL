@@ -1,0 +1,40 @@
+<div class="contenedor-seccion-cards-principal">
+
+    <h1 class="titulo-seccion">Negocios Disponibles</h1>
+
+    <div class="seccion-cards">
+
+        <div>
+            <select (change)="handleSelectChange($event)" [formControl]="categorySelect" name="categoria" id="categoria" class="select-categoria">
+
+                <img src="./public/images/iconoFiltro.svg" alt="Icono Filtro" class="iconoFiltro">
+
+                <option class="filtrar" value="" hidden>Filtrar Por:</option>
+                <option class="opcion" value="barberias">Barberias</option>
+                <option class="opcion" value="restaurantes">Restaurantes</option>
+                <option class="opcion" value="spa">SPA'S</option>
+                <option class="opcion" value="fotoStudio">Foto Studio's</option>
+                <option class="opcion" value="otros">Otros Negocios</option>
+
+            </select>
+        </div>
+
+        <div class="cards">
+
+            <!-- Componete Card -->
+             @for( item of business(); track item._id ) {
+
+                <app-card
+                    [id]="item._id"
+                    [businessLogo]="'http://localhost:3000/uploads/' + item.businessLogo"
+                    [name]="item.name"
+                    [slogan]="item.slogan" 
+                />
+
+             }
+
+        </div>
+
+    </div>
+
+ </div>

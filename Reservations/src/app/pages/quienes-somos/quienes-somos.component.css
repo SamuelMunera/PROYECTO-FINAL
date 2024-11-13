@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    font-family: "Ubuntu", sans-serif;
+}
+
+
+.part1{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    top: 0px;
+}
+
+.imgpeaple{
+    height: 500px;
+}
+
+
+.content{
+
+    padding: 30px;
+    margin: 20px;
+}
+
+
+h1{
+    
+    font-size: 50px;
+    list-style-type: none;
+    font-family: "Ubuntu", sans-serif;
+    color: var(--color-red);
+
+}
+
+h2{
+    
+    font-size: 30px;
+    list-style-type: none;
+    font-family: "Ubuntu", sans-serif;
+    color: var(--color-blue);
+
+}
+
+.p1{
+    
+    font-size: 20px;
+    list-style-type: none;
+    font-family: "Ubuntu", sans-serif;
+    color: rgb(43, 184, 240);
+
+}
+
+.imgpeaple{
+    width: 100%;
+    margin-right: 80px;
+    
+}
+
+
+.mvv{
+
+    display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "tmision tvision tvalores"
+    "pmision pvision pvalores";
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: var(--color-grey)  ;
+    border-radius: 0px 150px 0px 0px;
+
+}
+
+.tmision{
+
+    grid-area: tmision;
+
+}
+
+
+.tvision{
+
+    grid-area: tvision;
+
+}
+.tvalores{
+
+    grid-area: tvalores;
+
+}
+.pmision{
+
+    grid-area: pmision;
+
+}
+.pvision{
+
+    grid-area: pvision;
+
+}
+.pvalores{
+
+    grid-area: pvalores;
+
+}
+
+h3 {
+    font-size: 22px;
+    font-family: "Ubuntu", sans-serif;
+    color: var(--color-yellow);
+    padding: 20px;
+    text-wrap: balance;
+    
+
+
+}
+
+
+p{
+    font-size: 16px;
+    font-family: "Ubuntu", sans-serif;
+    padding: 10px;
+    text-wrap: balance;
+    
+
+}
+ul{
+    font-size: 16px;
+    font-family: "Ubuntu", sans-serif;
+    padding: 10px;
+    text-wrap: balance;
+
+}
+
+
+
+
+@media screen and (max-width: 800px) {
+
+    .part1{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: end;
+        top: 0px;
+        align-items: center;
+    }
+    .imgpeaple{
+        width: 30%;
+        height: 30%;
+        margin-right: 0px;
+
+
+
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .mvv{
+
+        display: grid;
+    grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto auto auto;
+      grid-template-areas:
+        "tmision" 
+        "pmision"
+        "tvision"
+        "pvision"
+        "tvalores"
+        "pvalores";       
+        
+          
+        justify-content: space-between;
+        align-items: flex-start;
+        background-color: var(--color-grey)  ;
+        border-radius: 0px 80px 0px 0px;
+    
+        
+    
+    
+       /** display: flex;
+        background-color: var(--color-grey)  ;
+        border-radius: 0px 150px 0px 0px;
+        height: auto;
+        justify-content: space-between;
+        align-items: center;
+        top: 0px;
+        padding: 50px;  **/
+        
+        
+    }
+    
+    .tmision{
+    
+        grid-area: tmision;
+        padding: 10px;
+    
+    }
+    
+    
+    .tvision{
+    
+        grid-area: tvision;
+    
+    }
+    .tvalores{
+    
+        grid-area: tvalores;
+    
+    }
+    .pmision{
+    
+        grid-area: pmision;
+        padding: 30px;
+    
+    }
+    .pvision{
+    
+        grid-area: pvision;
+        padding: 30px;
+    
+    }
+    .pvalores{
+    
+        grid-area: pvalores;
+        padding: 30px;
+    
+    } 
+}
+
+}

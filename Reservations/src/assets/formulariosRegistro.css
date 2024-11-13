@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*------------------ ROOT VARIABLES ---------------*/
+:root{
+
+    --color-primary: #7380ec;
+    --color-danger: #ff7782;
+    --color-success: #41f1b6;
+    --color-warning: #ffbb55;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-info-light: #dce1eb;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-primary-variant: #111e88;
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+
+}
+
+/* ------- DARK THEME VARIABLES ---------- */
+.dark-theme-variables {
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-primary-variant: #7380ec;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    transition: all 200ms ease;
+}
+
+html{
+    font-size: 14px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: poppins, sans-serif;
+    font-size: 0.88rem;
+    background: var(--color-background);
+    user-select: none;
+    overflow-y: auto;
+    color: var(--color-dark);
+}
+
+a{
+    color: var(--color-dark);
+}
+
+
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+h2{
+    font-size: 1.4rem;
+}
+
+h3{
+    font-size: 0.87rem;
+}
+
+h4{
+    font-size: 0.8rem;
+}
+
+h5{
+    font-size: 0.77rem;
+}
+
+small{
+    font-size: 0.75rem;
+}
+
+.text-muted{
+    color: var(--color-info-dark);
+}
+
+p{
+    color: var(--color-dark-variant);
+}
+
+b{
+    color: var(--color-dark);
+}
+
+.primary{
+    color: var(--color-primary);
+}
+
+.danger{
+    color: var(--color-danger);
+}
+
+.success{
+    color: var(--color-success);
+}
+
+.warning{
+    color: var(--color-warning);
+}
+/*=============== VENTANA POP-UP REGISTRO =============*/
+/* Estilos para la ventana modal */
+.modal-registro {
+    width: 75%;
+    height: 95vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: var(--card-border-radius);
+    background: var(--color-background);
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+/* Estilos para oscurecer el fondo cuando la ventana modal está abierta */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    overflow: auto;
+}
+
+/* Estilos para el formulario dentro de la ventana modal */
+.modal-registro form {
+    margin: 3rem;
+}
+
+.modal-registro .form-tittle {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-registro .form-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+}
+
+.modal-registro form input[type=text] {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    width: 300px;
+    box-sizing: border-box;
+    border-radius: 18px;
+    font-size: 16px;
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    transition: all 200ms ease;
+}
+
+.modal-registro form input[type=text]:focus {
+    width: 100%;
+}
+
+.modal-registro form input[type=text]:hover {
+    box-shadow: none;
+}
+
+.modal-registro form select {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    width: 200px;
+    box-sizing: border-box;
+    border-radius: 18px;
+    font-size: 16px;
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    transition: all 200ms ease;
+}
+
+.modal-registro select option {
+    border: 0;
+}
+
+/* Estilos para el botón de cerrar */
+.modal-registro #close-btn {
+    cursor: pointer;
+    color: var(--color-dark);
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.modal-registro .form-button{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-registro .form-button button {
+    background: var(--color-success);
+    border-radius: 18px;
+    padding: 15px;
+    width: 150px;
+    font-size: 16px;
+
+}

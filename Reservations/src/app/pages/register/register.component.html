@@ -1,0 +1,81 @@
+<div class="body">
+    <!------------- LOGIN DE REGISTRO ------------->
+<div class="container-form security hide">
+    <div class="information">
+        <div class="info-childs">
+            <img routerLink="/" src="/logo_blanco.png" alt="Logo de la empresa reservas">
+            <div class="tittle-reg">
+                <h2>Crea tu cuenta</h2>
+            </div>
+            <p>Ingresa el usuario y la contraseña con el que quieras inciar tu sesión</p>
+            <input type="button" value="Iniciar sesión" id="form-it" routerLink="/login">
+        </div>
+    </div>
+    <div class="form-information">
+        <div class="form-info-childs">
+            <h2>Registro</h2>
+            <form 
+            [formGroup]="registerFrom" 
+            action="/templates/sitio/" 
+            class="form-registro"
+            (submit)="onSubmit()"
+            enctype="multipart/form-data"
+            >
+
+                <label>
+                    <i class='bx bx-user'></i>
+                    <input 
+                    type="text" 
+                    name="" 
+                    id="" 
+                    placeholder="Correo"
+                    formControlName="email"
+                    >
+                </label>
+                <label>
+                    <i class='bx bx-lock-alt'></i>
+                    <input 
+                    type="text" 
+                    name="" 
+                    id="" 
+                    placeholder="Nombre"
+                    formControlName="name"
+                    >
+                </label>
+                <label>
+                    <i class='bx bx-lock-alt'></i>
+                    <input 
+                    type="text" 
+                    name="" 
+                    id="" 
+                    placeholder="Dirección"
+                    formControlName="address"
+                    >
+                </label>
+                <label>
+                    <i class='bx bx-lock-alt'></i>
+                    <input 
+                    type="text" 
+                    name="" 
+                    id="" 
+                    placeholder="Teléfono"
+                    formControlName="phone"
+                    >
+                </label>
+                <label>
+                    <i class='bx bx-lock-alt'></i>
+                    <input 
+                    type="password" 
+                    name="" 
+                    id="" 
+                    placeholder="Password"
+                    formControlName="password"
+                    >
+                </label>
+                <input type="submit" value="Registar como usuario" id="log-sec">
+                <input type="submit" value="Registrar como tienda" id="log-sec">
+            </form>
+        </div>
+    </div>
+</div>
+</div>

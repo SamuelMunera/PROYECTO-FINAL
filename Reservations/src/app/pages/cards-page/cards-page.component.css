@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.cards {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, minmax(20rem, 1fr));
+    margin: 30px auto ;
+}
+
+.contenedor-seccion-cards-principal {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+.titulo-seccion {
+    font-family: "Ubuntu";
+    font-size: 50px;
+    font-weight: bold italic;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.select-categoria {
+    width: 250px;
+    height: 45px;
+    border-radius: 10px;
+    color: white;
+    padding: 0px 10px 0px 15px;
+    margin-left: 95px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #A62639;
+    font-family: "Oxygen";
+}
+
+.opcion {
+    background-color: #FFFF;
+    color: black;
+}
+
+.opcion:hover {
+    background-color: #A62639 !important;
+    cursor: pointer;
+}
+
+/*Aun no funciona*/
+.icono-filtro {
+    color: white;
+    width: 45px;
+    height: 45px;
+}
+
+/*Media Querys Tablet*/
+
+@media (max-width: 768px) {
+
+    .cards {
+        grid-template-columns: repeat(2, minmax(20rem, 1fr));
+    }
+
+    .select-categoria {
+        margin: 25px 0px 0px 35px;
+    }
+
+}
+
+/*Media Querys Celular*/
+
+@media (max-width: 480px) {
+    .cards {
+        grid-template-columns: repeat(1, minmax(20rem, 1fr));
+    }
+
+    .select-categoria {
+        margin: 25px 0px 0px 75px;
+    }
+}

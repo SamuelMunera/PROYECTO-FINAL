@@ -1,0 +1,40 @@
+<section>
+    @if (business() === null) {
+        <p class="loading">Loading Content...</p>
+    } @else {
+
+        <div class="presentation">
+            <img
+              class="logo"
+              [src]="'http://localhost:3000/uploads/' + business()?.businessLogo"
+              [alt]="business()?.name"
+            />
+      
+            <div class="businessDetails">
+              <h2>{{ business()?.name }}</h2>
+              <h3>{{ business()?.slogan }}</h3>
+            </div>
+          </div>
+      
+          <div class="groupServices">
+
+          @for(service of business()?.services; track service._id) {
+
+              <div class="services">
+                <ul class="service">
+                  <li class="nameService">{{ service.name }}</li>
+                  <li class="list">{{ service.details }}<li>
+                  <li class="list">Servicio de: {{ service.schedule }}</li>
+                  <li class="list">{{ service.address }}</li>
+                  <li class="list price">{{ service.price | currency }}</li>
+                </ul>
+        
+                <button [routerLink]="'/reserva/' + service._id" class="buttonReservation">Reservar</button>
+              </div>
+              
+            }
+
+          </div>
+
+    }
+</section>

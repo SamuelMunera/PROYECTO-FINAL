@@ -1,0 +1,33 @@
+<header>
+
+    <div id="header1">
+      <a class="logo" routerLink="/" target="_self"><img class="logoreserva" src="/logo_color.png" alt="logo reserva" /></a>
+
+
+      <div id="buscar">
+
+
+
+        <button class="lupa1"><img class="lupa" src="/lupa.png" alt="buscar" /></button>
+
+        <input type="text" name="Buscar" placeholder="Buscar..." id="Label_Buscar" />
+
+      </div>
+      
+      @if (name.length !== 0) {
+        <p>Hola, {{ name }}</p>
+      }
+      <a class="logo" routerLink="login" target="_self"><img class="logousuario" src="/usuario1.png" alt="login" /></a>
+
+    </div>
+
+
+
+
+    <ul>
+      <li><a routerLink="/card">Categorías</a> </li>
+      <li><a routerLink="/tusReservas">Tus Reservas</a> </li>
+      <li><a href="#masPopulares">Más Populares</a> </li>
+    </ul>
+
+</header>

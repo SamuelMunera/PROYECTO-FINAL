@@ -1,0 +1,37 @@
+<div class="body">
+<div class="container-form it">
+
+    <div class="information">
+        <div class="info-childs">
+            <img routerLink="/" src="/logo_blanco.png" alt="Logo de la empresa reservas">
+            <h2>Bienvenido</h2>
+            <p>Inicia sesión con tu cuenta para reservar con nosotros</p>
+            <input type="button" value="Registrarse" id="form-sec" routerLink="/register">
+        </div>
+    </div>
+    <div class="form-information">
+        <div class="form-info-childs">
+            <h2>Usuario</h2>
+            <form [formGroup]="loginForm" (submit)="onSubmit()"  class="form-registro">
+                <label>
+                    <i class='bx bx-user'></i>
+                    <input type="text" name="txtuserit" id="" placeholder="Email"
+                    formControlName="email"
+                    >
+                </label>
+                <label>
+                    <i class='bx bx-lock-alt'></i>
+                    <input type="password" name="txtpasswordit" id="" placeholder="Password"
+                    formControlName="password"
+                    >
+                </label>
+                <input type="submit" name="accion" value="Login" id="log-it">
+            </form>
+            <br>
+            <small>
+                {{error() !== "" ? error() : ""}}
+            </small>
+        </div>
+    </div>
+</div>
+</div>

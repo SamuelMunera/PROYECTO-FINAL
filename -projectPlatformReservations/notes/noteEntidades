@@ -1,0 +1,47 @@
+Entidad Usuarios (User) -> 
+    name
+    email
+    password 
+    phone
+    idRol  (middlewars -> token)
+    deletedAt
+
+    -> 
+
+ ----------------------------------------
+
+Entidad Negocio (Business) ->
+    name
+    address
+    phone
+    email
+    deletedAt
+
+    -> idUser - idService
+
+ ----------------------------------------
+
+Entidad Servicio (Service) ->
+    name 
+    schedule
+    serviceTime
+    businessDays
+    address
+    price
+    deletedAt
+
+    -> idBusiness
+
+ ----------------------------------------
+
+Entidad Reserva (Reservation) ->
+    dateReservation
+    timeReservation
+    status
+    priceTotal
+    deletedAt
+
+    -> idService - idUser - idBusiness
+
+
+tener encuenta casos de borde (si un dueño de negocio piensa entrar a otro negocio)

@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+}
+
+:root {
+
+    --color-blue: #335D8F;
+    --color-yellow: #FF8811;
+    --color-red: #A62639;
+    --color-white: #ffffff;
+}
+
+/**   
+  var(--color-blue)
+  var(--color-yellow)
+  var(--color-red)
+  var(--color-white)     **/
+
+
+
+footer {
+    background-color: var(--color-blue);
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+    padding: 10px;
+}
+
+
+.logoreserva {
+
+    max-height: 80px;
+    max-width: 200px;
+    margin: auto 20px;
+}
+
+.ayuda {
+    font-weight: 2px;
+    font-size: 30px;
+    text-decoration: none;
+    font-family: "Ubuntu", sans-serif;
+    color: var(--color-white);
+
+}
+
+ul {
+
+    font-weight: 2px;
+    font-size: 15px;
+    list-style-type: none;
+    font-family: "Ubuntu", sans-serif;
+    color: var(--color-white);
+
+}
+
+
+ul li a {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+
+.boxgrid {
+
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 20px auto;
+  grid-template-areas:
+    "q1 q1 q1 q1"
+    "facebook instagram xred youtube";
+    justify-content: space-between;
+    align-items: center;
+    
+   
+
+}
+
+.quienessomos {
+    grid-area: q1;
+    font-weight: 50px;
+    font-size: 15px;
+    font-family: "Ubuntu", sans-serif;
+    color: var(--color-white);
+    text-decoration: none;
+   padding: 20px;  
+}
+
+.facebook{
+    grid-area: facebook;
+}
+
+.logofacebook
+{
+
+    height: 40px;
+    
+   
+}
+
+.instagram{
+    grid-area: instagram;
+    
+
+}
+
+.logoinstagram
+{
+    height: 40px;
+}
+
+.xred{
+    grid-area: xred;
+    
+
+}
+
+.logoxred
+{
+
+    height: 40px;
+}
+
+.youtube{
+    grid-area: youtube;
+  
+
+}
+
+.logoyoutube
+{
+
+    height: 40px;
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+
+    footer {
+        background-color: var(--color-blue);
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        top: 0px;
+        height: auto;
+        padding: 10px;
+        
+    
+    }
+
+}

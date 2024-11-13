@@ -1,0 +1,13 @@
+<div class="card">
+    <div class="contenedor-imagen-card">
+        <img [src]="businessLogo" alt="Logo">
+    </div>
+    <div class="contenedor-informacion-card">
+        <h1>{{ name }}</h1>
+        <p>{{ slogan || "Sin Slogan" }}</p>
+    </div>
+
+    <a routerLink="{{ '/business/' + id }}">
+        <button>Mostrar Más...</button>
+    </a>
+</div>

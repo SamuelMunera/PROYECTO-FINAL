@@ -1,0 +1,13 @@
+Tareas Para 10/09/2024 ->
+
+1. Autenticación -> Listo
+2. Multers ( Business - Services ) -> Listo
+
+Tareas faltantes (opcionales) -> 
+
+3. Relacionar entidades necesarias -> Listo
+
+
+4. Validaciones - Middlewares -> Mañana (Hacer Middleware general para Token para aplicarlo en las rutas)
+                                        (Hacer validaciones faltantes para -> reservation - service -> (if ususario token))
+
